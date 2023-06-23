@@ -7,7 +7,13 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
 
 def prepare_model():
-    """DOC """
+    """ 
+    1. Donwload images from csv file where urls are stored 
+    2. Load model from Hugging Face
+    3. Compute embedding vector for the images
+    4. Add FAISS index to compute similarity between vectors
+
+    """
     utils.execute_download_image(IMAGE_DIR, CSV_NAME)
 
     df = utils.load_csv(CSV_NAME)
