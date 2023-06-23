@@ -1,0 +1,7 @@
+datasets
+faiss-cpu
+transformers
+torch
+torchvision
+fastapi
+uvicorn
